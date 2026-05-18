@@ -4,6 +4,7 @@ import imgPorto from './assets/porto-card.jpg'
 import imgMachuPichu from './assets/machupichu-card.jpg'
 import imgRio from './assets/rio-card.jpg'
 import Card from './Card'
+import Footer from './Footer'
 
 function Home() {
     return (
@@ -52,6 +53,8 @@ function Home() {
                     </div>
                 </section>
             </main>
+
+            <Footer />
         </div>
     )
 }
