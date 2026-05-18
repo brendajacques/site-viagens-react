@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Button from './Button'
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -73,12 +74,7 @@ function Navbar() {
                     </div>
 
                     <div className="hidden md:flex items-center justify-end w-[200px]">
-                        <button
-                            href="#contato"
-                            className="relative group overflow-hidden px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-500 text-sm transition-all duration-300"
-                        >
-                            <span className="relative z-10">Ver pacotes</span>
-                        </button>
+                        <Button href="#pacotes">Ver pacotes</Button>
                     </div>
 
                     <div className="flex md:hidden">
@@ -130,12 +126,7 @@ function Navbar() {
                         )
                     })}
                     <div className="pt-4 w-full flex justify-center">
-                        <button
-                            href="#contato"
-                            className="w-full relative group overflow-hidden px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-500 text-sm transition-all duration-300"
-                        >
-                            <span className="relative z-10">Ver pacotes</span>
-                        </button>
+                        <Button href="#pacotes" className="w-full">Ver pacotes</Button> 
                     </div>
                 </div>
             </div>
