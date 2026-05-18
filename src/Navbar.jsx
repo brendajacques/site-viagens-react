@@ -37,16 +37,15 @@ function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                scrolled
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
                     ? 'bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-md border-b border-zinc-200/50 dark:border-zinc-800/50 py-3'
                     : 'bg-transparent py-5'
-            }`}
+                }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
-                    
-                    <div className="flex-shrink-0 w-[200px]">
+
+                    <div className="shrink-0 w-[200px]">
                         <span className='font-bold text-2xl'>HZ®</span>
                     </div>
 
@@ -58,11 +57,10 @@ function Navbar() {
                                     <li key={link.hash} className="relative">
                                         <a
                                             href={link.hash}
-                                            className={`relative py-2 px-3 text-md transition-colors duration-200 block rounded-full ${
-                                                isActive
+                                            className={`relative py-2 px-3 text-md transition-colors duration-200 block rounded-full ${isActive
                                                     ? 'bg-amber-200'
                                                     : 'text-zinc-600 hover:bg-gray-200'
-                                            }`}
+                                                }`}
                                         >
                                             {link.name}
 
@@ -102,9 +100,8 @@ function Navbar() {
             </div>
 
             <div
-                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-screen opacity-100 mt-2 py-4' : 'max-h-0 opacity-0 mt-0 py-0'
-                } bg-white dark:bg-zinc-950 border-b border-zinc-200/50 dark:border-zinc-800/50 px-4`}
+                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100 mt-2 py-4' : 'max-h-0 opacity-0 mt-0 py-0'
+                    } bg-white dark:bg-zinc-950 border-b border-zinc-200/50 dark:border-zinc-800/50 px-4`}
                 id="mobile-menu"
             >
                 <div className="space-y-1.5 flex flex-col items-center">
@@ -115,18 +112,17 @@ function Navbar() {
                                 key={link.hash}
                                 href={link.hash}
                                 onClick={() => setIsOpen(false)}
-                                className={`w-full text-center relative py-2 px-3 text-md transition-colors duration-200 block rounded-full ${
-                                    isActive
+                                className={`w-full text-center relative py-2 px-3 text-md transition-colors duration-200 block rounded-full ${isActive
                                         ? 'bg-amber-200'
                                         : 'text-zinc-600 hover:bg-gray-200'
-                                }`}
+                                    }`}
                             >
                                 {link.name}
                             </a>
                         )
                     })}
                     <div className="pt-4 w-full flex justify-center">
-                        <Button href="#pacotes" className="w-full">Ver pacotes</Button> 
+                        <Button href="#pacotes" className="w-full">Ver pacotes</Button>
                     </div>
                 </div>
             </div>
